@@ -7,13 +7,13 @@ import { randomString } from 'https://jslib.k6.io/k6-utils/1.2.0/index.js'; // r
 import { uuidv4 } from 'https://jslib.k6.io/k6-utils/1.4.0/index.js'; // uuidv4()
 import { randomItem } from 'https://jslib.k6.io/k6-utils/1.2.0/index.js';
 
-// export const options = {
-//     stages : [
-//         {duration: '3s', target: '10'}, // traffic ramp-up from 1 to {targer} users over {duration} .
-//         {duration: '10s', target: '10'}, // stay at {target} users for {duration} 
-//         {duration: '3s', target: '0'}, // ramp-down to 0 users
-//     ]
-// };
+export const options = {
+    stages : [
+        {duration: '3s', target: '10'}, // traffic ramp-up from 1 to {targer} users over {duration} .
+        {duration: '10s', target: '10'}, // stay at {target} users for {duration} 
+        {duration: '3s', target: '0'}, // ramp-down to 0 users
+    ]
+};
 
 // export const options = {
 //     vus: 10,
